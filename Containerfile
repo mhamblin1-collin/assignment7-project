@@ -3,7 +3,7 @@ RUN dnf -yqq install httpd && \
     /bin/mkdir /structure && \
     /bin/chmod 777 /structure && \
     /usr/sbin/useradd -u 5000 collin
-COPY ./index.html /var/www/html/index.html
+COPY index.html /var/www/html
 USER sync
 RUN /bin/mkdir /structure/sync-work
 USER nobody
